@@ -1,5 +1,3 @@
-# guidasuccessione.github.io
-Guida gratuita alla successione online: documenti, checklist, calcolatori e ravvedimento. Senza intermediari.
 # GuidaSuccessione.it
 
 **Guida gratuita e pratica alla dichiarazione di successione telematica.**
