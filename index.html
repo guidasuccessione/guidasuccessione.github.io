@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guida gratuita alla dichiarazione di successione online</title>
+  <meta name="description" content="Guida gratuita e indipendente alla dichiarazione di successione: guide pratiche, calcolatori, checklist e ravvedimento operoso.">
+  <link rel="canonical" href="https://guidasuccessione.it/">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#1a2744;
+      --navy-light:#243358;
+      --gold:#C4963A;
+      --gold-dark:#a97b2f;
+      --gold-soft:#d8b36a;
+      --gold-pale:#f3e7cc;
+      --cream:#faf8f4;
+      --cream2:#f2ede4;
+      --text:#1a1a1a;
+      --text-muted:#6b6560;
+      --border:rgba(196,150,58,0.2);
+      --radius:18px;
+      --max:1180px;
+      --shadow:0 12px 30px rgba(26,39,68,0.08);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'DM Sans',Arial,sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#f9f5ee 0%,#f6f1e8 100%);
+      line-height:1.65;
+    }
+    .container{width:min(calc(100% - 32px),var(--max));margin:0 auto}
+    nav{
+      background:var(--navy);
+      padding:0 2rem;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:60px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    .logo{
+      font-family:'Playfair Display',serif;
+      color:var(--gold-soft);
+      font-size:18px;
+      font-weight:600;
+      text-decoration:none;
+    }
+    .logo span{color:#fff}
+    .nav-links{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
+    .nav-links a{
+      color:rgba(255,255,255,0.72);
+      text-decoration:none;
+      font-size:14px;
+      transition:color .2s;
+    }
+    .nav-links a:hover{color:var(--gold-soft)}
+    .hero{padding:56px 0 28px}
+    .eyebrow{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(196,150,58,0.10);
+      color:var(--gold-dark);
+      font-size:13px;
+      font-weight:700;
+    }
+    h1,h2,h3,.calc-title{
+      font-family:'Playfair Display',serif;
+      color:var(--navy);
+    }
+    h1{
+      font-size:clamp(2.2rem,6vw,4.4rem);
+      line-height:1.02;
+      letter-spacing:-.04em;
+      max-width:12ch;
+      margin:18px 0 16px;
+    }
+    .lede{
+      max-width:64ch;
+      color:var(--text-muted);
+      font-size:1.08rem;
+      margin:0 0 26px;
+    }
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+      border-radius:999px;
+      padding:14px 20px;
+      font-weight:700;
+      border:1px solid transparent;
+      font-family:'DM Sans',Arial,sans-serif;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--gold-dark) 0%,var(--gold) 55%,var(--gold-soft) 100%);
+      color:#fff;
+      box-shadow:0 8px 20px rgba(196,150,58,0.28);
+    }
+    .btn-primary:hover{
+      filter:brightness(0.97);
+    }
+    .btn-secondary{
+      background:#fff;
+      border-color:var(--border);
+      color:var(--navy);
+    }
+    .stats,.path-grid,.guide-grid,.tool-grid,.faq-grid{display:grid;gap:16px}
+    .stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:10px}
+    .path-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .guide-grid,.tool-grid,.faq-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .stat,.card{
+      background:rgba(255,255,255,.84);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+    .stat strong{
+      display:block;
+      font-size:1.3rem;
+      margin-bottom:4px;
+      color:var(--navy);
+      font-family:'Playfair Display',serif;
+    }
+    section{padding:34px 0}
+    .section-head{max-width:70ch;margin-bottom:18px}
+    .section-kicker{
+      color:var(--gold-dark);
+      text-transform:uppercase;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+    h2{
+      font-size:clamp(1.7rem,3.8vw,2.8rem);
+      line-height:1.1;
+      margin:8px 0 10px;
+      letter-spacing:-.03em;
+    }
+    .section-copy{color:var(--text-muted);margin:0}
+    .step-no,.mini-tag{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:42px;
+      height:42px;
+      border-radius:12px;
+      background:var(--gold-pale);
+      color:var(--gold-dark);
+      font-weight:800;
+      margin-bottom:14px;
+    }
+    .mini-tag{
+      min-width:auto;
+      height:auto;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+    }
+    .card h3{margin:0 0 8px;font-size:1.18rem;line-height:1.25}
+    .card p{margin:0;color:var(--text-muted)}
+    .guide-card{text-decoration:none;display:block}
+    .guide-card .readmore,.tool-link{
+      margin-top:14px;
+      display:inline-block;
+      color:var(--gold-dark);
+      font-weight:700;
+    }
+    .calc{
+      background:linear-gradient(135deg,#a97b2f 0%,#C4963A 55%,#d8b36a 100%);
+      color:#fff;
+      border-radius:28px;
+      padding:28px;
+      box-shadow:0 16px 34px rgba(196,150,58,0.24);
+    }
+    .calc-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:start}
+    .calc h2,.calc-title{color:#fff}
+    .calc-box{
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:20px;
+      padding:18px;
+      backdrop-filter:blur(4px);
+    }
+    .calc-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+    .calc-list li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:10px}
+    .calc-note{color:rgba(255,255,255,.86);font-size:14px;margin-top:14px}
+    footer{
+      background:var(--navy);
+      color:rgba(255,255,255,.55);
+      padding:2rem;
+      text-align:center;
+      font-size:13px;
+      margin-top:4rem;
+    }
+    footer strong{color:var(--gold-soft)}
+    .footer-links{display:flex;justify-content:center;gap:2rem;list-style:none;flex-wrap:wrap;margin:0 0 1rem;padding:0}
+    .footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:13px}
+    .footer-links a:hover{color:var(--gold-soft)}
+    @media(max-width:980px){.stats,.path-grid,.guide-grid,.tool-grid,.faq-grid,.calc-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:720px){
+      nav{align-items:flex-start;padding:14px 2rem;flex-direction:column}
+      .nav-links{flex-wrap:wrap}
+      .stats,.path-grid,.guide-grid,.tool-grid,.faq-grid,.calc-grid{grid-template-columns:1fr}
+      .hero{padding-top:34px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="/">guida<span>successione</span>.it</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#le-guide-piu-utili">Guide</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Guida gratuita e indipendente</span>
+      <h1>La dichiarazione di successione spiegata chiaramente</h1>
+      <p class="lede">Tutto quello che devi sapere per orientarti: guide pratiche, calcolatori, checklist e ravvedimento operoso. Senza intermediari e senza costi nascosti.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#le-guide-piu-utili">Inizia dalla guida</a>
+        <a class="btn btn-secondary" href="#strumenti">Vai agli strumenti</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>12 mesi</strong><span>per presentare</span></div>
+        <div class="stat"><strong>4%</strong><span>aliquota coniuge/figli</span></div>
+        <div class="stat"><strong>1 M€</strong><span>franchigia per figlio</span></div>
+        <div class="stat"><strong>7 guide</strong><span>subito disponibili</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Il percorso</div>
+        <h2>Come si affronta una successione</h2>
+        <p class="section-copy">Non devi fare tutto insieme. Ecco le fasi principali, nell'ordine giusto.</p>
+      </div>
+      <div class="path-grid">
+        <article class="card"><div class="step-no">01</div><h3>Raccogli i documenti</h3><p>Certificato di morte, visure catastali, saldi bancari, testamento. Prima raccogli, poi compili.</p></article>
+        <article class="card"><div class="step-no">02</div><h3>Identifica eredi e beni</h3><p>Chi sono gli eredi, in che quota, e quali beni fanno parte dell'asse.</p></article>
+        <article class="card"><div class="step-no">03</div><h3>Calcola il valore dei beni</h3><p>Gli immobili si valutano con la rendita catastale rivalutata, non con il prezzo di mercato.</p></article>
+        <article class="card"><div class="step-no">04</div><h3>Compila la dichiarazione</h3><p>Tramite SuccessioniOnline dell'Agenzia delle Entrate o tramite intermediario.</p></article>
+        <article class="card"><div class="step-no">05</div><h3>Presenta e paga le imposte</h3><p>La dichiarazione si invia telematicamente. Le imposte vengono liquidate dopo il controllo.</p></article>
+        <article class="card"><div class="step-no">06</div><h3>Esegui la voltura catastale</h3><p>Dopo l'accettazione, gli immobili vanno trascritti a nome degli eredi presso il catasto.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="le-guide-piu-utili">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Contenuti gratuiti</div>
+        <h2>Le guide più utili</h2>
+        <p class="section-copy">Articoli scritti in italiano semplice, senza tecnicismi inutili, aggiornati alle norme vigenti.</p>
+      </div>
+      <div class="guide-grid">
+        <a class="card guide-card" href="#"><span class="mini-tag">Fondamentali</span><h3>Documenti per la successione: cosa serve davvero</h3><p>Anagrafe, banca, catasto, testamento: la lista completa di tutto quello che devi raccogliere prima di iniziare.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Fondamentali</span><h3>Successione telematica: cos'è e come funziona</h3><p>Cos'è il portale SuccessioniOnline, chi può usarlo e quando è obbligatorio presentare in via telematica.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Fondamentali</span><h3>Chi deve presentare la dichiarazione di successione</h3><p>Eredi, legatari, chiamati all'eredità: chi è obbligato, chi è esonerato e cosa succede se ci sono più eredi.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Fondamentali</span><h3>Scadenze e tempi della successione online</h3><p>Hai 12 mesi dal decesso. Cosa succede se superi il termine, come si contano i mesi e le eccezioni previste.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Guida passo-passo</span><h3>Come fare la successione online in 7 mosse</h3><p>Dal certificato di morte all'invio telematico: tutto il percorso spiegato passo dopo passo, senza salti.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Errori e problemi</span><h3>Successione in ritardo: rischi e rimedi</h3><p>Hai superato i 12 mesi? Puoi ancora regolarizzarti con il ravvedimento operoso, pagando sanzioni ridotte.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Volture</span><h3>Voltura catastale dopo la successione</h3><p>Quando serve, come funziona e quali dati controllare per non bloccare l'aggiornamento catastale.</p><span class="readmore">Leggi la guida →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container calc">
+      <div class="calc-grid">
+        <div>
+          <div class="section-kicker" style="color:rgba(255,255,255,.80)">Strumento gratuito</div>
+          <h2 class="calc-title" style="margin-top:8px">Calcola le imposte di successione</h2>
+          <p style="color:rgba(255,255,255,.88)">Stima indicativa basata sulle aliquote vigenti. Non sostituisce una consulenza professionale.</p>
+        </div>
+        <div class="calc-box">
+          <ul class="calc-list">
+            <li><span>Imposta successione</span><strong>—</strong></li>
+            <li><span>Aliquota applicata</span><strong>—</strong></li>
+            <li><span>Franchigia per erede</span><strong>—</strong></li>
+            <li><span>Base imponibile netta</span><strong>—</strong></li>
+          </ul>
+        </div>
+      </div>
+      <p class="calc-note">⚠️ Calcolo indicativo. Per gli immobili aggiungi imposta ipotecaria (2%) e catastale (1%) sulla rendita rivalutata. Rivolgiti sempre a un professionista per la tua situazione.</p>
+    </div>
+  </section>
+
+  <section id="strumenti">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Strumenti gratuiti</div>
+        <h2>Tutto quello che ti serve, in un posto solo</h2>
+        <p class="section-copy">Strumenti pratici per ogni fase della successione, senza registrazione e senza costi.</p>
+      </div>
+      <div class="tool-grid">
+        <article class="card"><h3>Checklist documenti</h3><p>Lista completa di tutti i documenti da raccogliere, suddivisa per categoria. Spuntabile e scaricabile in PDF.</p><span class="tool-link">Vai alla checklist →</span></article>
+        <article class="card"><h3>Calcolatore imposte</h3><p>Stima l'imposta di successione in base al valore dell'asse, al grado di parentela e al numero di eredi.</p><span class="tool-link">Apri il calcolatore →</span></article>
+        <article class="card"><h3>Calcolatore ravvedimento</h3><p>Inserisci la data del decesso e scopri sanzione ridotta e interessi da versare per regolarizzare il ritardo.</p><span class="tool-link">Calcola il ravvedimento →</span></article>
+        <article class="card"><h3>FAQ: le domande più comuni</h3><p>Risposte chiare alle domande più frequenti: blocco dei conti, polizze vita, prima casa, rinuncia all'eredità.</p><span class="tool-link">Sfoglia le FAQ →</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Domande frequenti</div>
+        <h2>Le risposte più cercate</h2>
+        <p class="section-copy">Le domande più comuni sulla dichiarazione di successione.</p>
+      </div>
+      <div class="faq-grid">
+        <article class="card"><h3>Quando si apre la successione?</h3><p>La successione si apre al momento della morte del defunto, nel luogo del suo ultimo domicilio. Da quel momento decorrono i 12 mesi per la dichiarazione.</p></article>
+        <article class="card"><h3>Quando non è obbligatoria?</h3><p>Non è obbligatoria nei casi di esonero previsti per coniuge e parenti in linea retta entro 100.000 euro e senza immobili.</p></article>
+        <article class="card"><h3>Cosa succede se sono in ritardo?</h3><p>Scattano sanzioni per omessa o tardiva dichiarazione, ma il ravvedimento operoso consente una forte riduzione.</p></article>
+        <article class="card"><h3>La polizza vita rientra nell'asse?</h3><p>In generale no, se c'è beneficiario nominato; alcune polizze finanziarie possono però essere riqualificate.</p></article>
+        <article class="card"><h3>Ci sono agevolazioni prima casa?</h3><p>Sì, in presenza dei requisiti le imposte ipotecaria e catastale sono dovute in misura fissa.</p></article>
+        <article class="card"><h3>Posso rinunciare all'eredità?</h3><p>Sì, con atto formale davanti al notaio o al cancelliere del Tribunale; in alternativa è possibile l'accettazione con beneficio di inventario.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="#le-guide-piu-utili">Guide</a></li>
+      <li><a href="/privacy.html">Privacy</a></li>
+    </ul>
+    <p><strong>guidasuccessione.it</strong> — Informazioni gratuite e indipendenti</p>
+  </footer>
+</body>
+</html>
