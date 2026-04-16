@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guida gratuita alla dichiarazione di successione online</title>
+  <meta name="description" content="Guida gratuita e indipendente alla dichiarazione di successione: guide pratiche, calcolatori, checklist e ravvedimento operoso.">
+  <link rel="canonical" href="https://guidasuccessione.it/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:#1a2744;
+      --navy-light:#243358;
+      --gold:#c4963a;
+      --gold-dark:#a97b2f;
+      --gold-soft:#d8b36a;
+      --gold-pale:#f3e7cc;
+      --cream:#faf8f4;
+      --cream-2:#f4eee4;
+      --text:#1d1a17;
+      --text-muted:#6b6560;
+      --border:rgba(196,150,58,.22);
+      --success:#23613d;
+      --radius:18px;
+      --shadow:0 18px 40px rgba(26,39,68,.08);
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'DM Sans', Arial, sans-serif;
+      background:linear-gradient(180deg,#fbf8f2 0%,#f5efe6 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .container{width:min(calc(100% - 32px), var(--max)); margin:0 auto}
+    nav{
+      position:sticky; top:0; z-index:100;
+      background:rgba(26,39,68,.96); backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav-inner{
+      min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:20px;
+    }
+    .logo{
+      text-decoration:none; font-family:'Playfair Display', serif; font-size:1.7rem; font-weight:700;
+      color:var(--gold-soft);
+    }
+    .logo span{color:#fff}
+    .nav-links{display:flex; gap:1.3rem; list-style:none; margin:0; padding:0}
+    .nav-links a{text-decoration:none; color:rgba(255,255,255,.76); font-size:.96rem}
+    .nav-links a:hover{color:#fff}
+    .hero{padding:62px 0 26px}
+    .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center}
+    .eyebrow{
+      display:inline-block; padding:8px 12px; border-radius:999px; background:rgba(196,150,58,.11);
+      color:var(--gold-dark); font-size:.82rem; font-weight:700; letter-spacing:.02em;
+    }
+    h1,h2,h3,.calc-title{font-family:'Playfair Display', serif; color:var(--navy); margin:0}
+    h1{font-size:clamp(2.2rem, 5vw, 4.6rem); line-height:1.02; margin:16px 0 18px}
+    .lede{font-size:1.1rem; color:var(--text-muted); max-width:62ch; margin:0 0 24px}
+    .hero-actions{display:flex; flex-wrap:wrap; gap:14px; margin-bottom:28px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 18px;
+      border-radius:999px; text-decoration:none; font-weight:700; border:1px solid transparent;
+    }
+    .btn-primary{background:var(--gold); color:#fff; box-shadow:0 10px 24px rgba(196,150,58,.24)}
+    .btn-primary:hover{background:var(--gold-dark)}
+    .btn-secondary{background:#fff; color:var(--navy); border-color:var(--border)}
+    .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+    .stat{background:#fff; border:1px solid var(--border); border-radius:18px; padding:18px; box-shadow:var(--shadow)}
+    .stat strong{display:block; font-size:1.5rem; color:var(--navy)}
+    .stat span{display:block; color:var(--text-muted); font-size:.92rem; margin-top:4px}
+    .hero-card{
+      background:linear-gradient(145deg, #fff 0%, #f7efe0 100%);
+      border:1px solid var(--border); border-radius:28px; padding:26px; box-shadow:var(--shadow);
+    }
+    .hero-card h2{font-size:1.5rem; margin-bottom:10px}
+    .hero-card p{margin:0 0 16px; color:var(--text-muted)}
+    .hero-card ul{margin:0; padding-left:18px; color:var(--navy)}
+    section{padding:34px 0}
+    .section-head{max-width:780px; margin-bottom:20px}
+    .section-kicker{font-size:.82rem; text-transform:uppercase; letter-spacing:.12em; color:var(--gold-dark); font-weight:700; margin-bottom:8px}
+    .section-copy{color:var(--text-muted); margin:10px 0 0}
+    .path-grid,.guide-grid,.tool-grid,.faq-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .card{
+      background:#fff; border:1px solid var(--border); border-radius:22px; padding:22px; box-shadow:var(--shadow);
+    }
+    .card h3{font-size:1.18rem; margin-bottom:8px}
+    .card p{margin:0; color:var(--text-muted)}
+    .step-no,.mini-tag{
+      display:inline-flex; align-items:center; justify-content:center; min-width:42px; min-height:42px;
+      padding:0 12px; border-radius:999px; background:var(--gold-pale); color:var(--gold-dark); font-weight:700; margin-bottom:14px;
+    }
+    .guide-card{text-decoration:none; display:block}
+    .guide-card .readmore,.tool-link{display:inline-block; margin-top:14px; color:var(--gold-dark); font-weight:700}
+    .calc{
+      background:linear-gradient(135deg,#b07d2a 0%,#c4963a 55%,#d5ac58 100%);
+      color:#fff; border-radius:30px; padding:30px; box-shadow:0 20px 40px rgba(196,150,58,.26);
+    }
+    .calc-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:22px; align-items:start}
+    .calc h2,.calc-title{color:#fff}
+    .calc-box{
+      background:rgba(255,255,255,.15); border:1px solid rgba(255,255,255,.22); border-radius:22px; padding:20px;
+      backdrop-filter:blur(6px);
+    }
+    .calc-form{display:grid; gap:14px; margin-top:18px}
+    .calc-form-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+    .field label{display:block; font-size:.92rem; font-weight:700; margin-bottom:6px}
+    .field input,.field select{
+      width:100%; min-height:48px; border-radius:14px; border:1px solid rgba(255,255,255,.28);
+      background:rgba(255,255,255,.18); color:#fff; padding:0 14px; outline:none;
+    }
+    .field input::placeholder{color:rgba(255,255,255,.72)}
+    .field select option{color:#111}
+    .checkbox-row{display:flex; align-items:flex-start; gap:10px; font-size:.95rem; color:rgba(255,255,255,.92)}
+    .checkbox-row input{margin-top:4px}
+    .calc-list{list-style:none; padding:0; margin:0; display:grid; gap:12px}
+    .calc-list li{display:flex; justify-content:space-between; gap:16px; border-bottom:1px solid rgba(255,255,255,.16); padding-bottom:10px}
+    .calc-result{font-weight:700}
+    .calc-note{color:rgba(255,255,255,.88); font-size:.92rem; margin-top:16px}
+    .calc-helper{font-size:.92rem; color:rgba(255,255,255,.84); margin-top:12px}
+    .faq-grid{grid-template-columns:repeat(2,1fr)}
+    footer{background:var(--navy); color:rgba(255,255,255,.6); padding:2rem; margin-top:3rem; text-align:center; font-size:.92rem}
+    .footer-links{display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; list-style:none; padding:0; margin:0 0 1rem}
+    .footer-links a{text-decoration:none; color:rgba(255,255,255,.65)}
+    .footer-links a:hover{color:#fff}
+    @media (max-width:980px){
+      .hero-grid,.calc-grid,.path-grid,.guide-grid,.tool-grid,.faq-grid,.stats{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:720px){
+      .nav-inner{flex-direction:column; align-items:flex-start; padding:14px 0}
+      .nav-links{flex-wrap:wrap}
+      .hero-grid,.calc-grid,.path-grid,.guide-grid,.tool-grid,.faq-grid,.stats,.calc-form-grid{grid-template-columns:1fr}
+      .hero{padding-top:34px}
+      .calc,.hero-card{padding:22px}
+      h1{font-size:2.2rem}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="/">guida<span>successione</span>.it</a>
+      <ul class="nav-links">
+        <li><a href="#le-guide-piu-utili">Guide</a></li>
+        <li><a href="#calcolatore">Calcolatore</a></li>
+        <li><a href="#strumenti">Strumenti</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Guida gratuita e indipendente</span>
+        <h1>La dichiarazione di successione spiegata chiaramente</h1>
+        <p class="lede">Guide pratiche, strumenti utili e calcolatori per orientarti nella successione: documenti, scadenze, ravvedimento e imposte.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#le-guide-piu-utili">Inizia dalla guida</a>
+          <a class="btn btn-secondary" href="#calcolatore">Prova il calcolatore</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>12 mesi</strong><span>per presentare la dichiarazione</span></div>
+          <div class="stat"><strong>4%</strong><span>aliquota per coniuge e figli</span></div>
+          <div class="stat"><strong>1 M€</strong><span>franchigia per coniuge e figli</span></div>
+          <div class="stat"><strong>200+</strong><span>casi pratici da sviluppare</span></div>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Cosa trovi nel sito">
+        <h2>Cosa trovi in questa guida</h2>
+        <p>Contenuti in italiano semplice, pensati per chi deve capire cosa fare dopo il decesso, senza perdersi tra termini tecnici e passaggi telematici.</p>
+        <ul>
+          <li>Documenti da raccogliere prima della compilazione.</li>
+          <li>Chi deve presentare la dichiarazione e quando si è esonerati.</li>
+          <li>Calcolo indicativo dell'imposta di successione.</li>
+          <li>Indicazioni su ravvedimento, volture e casi frequenti.</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Il percorso</div>
+        <h2>Come si affronta una successione</h2>
+        <p class="section-copy">Non devi fare tutto insieme. Ecco le fasi principali, nell'ordine giusto.</p>
+      </div>
+      <div class="path-grid">
+        <article class="card"><div class="step-no">01</div><h3>Raccogli i documenti</h3><p>Certificato di morte, visure catastali, saldi bancari, testamento e dati anagrafici degli eredi.</p></article>
+        <article class="card"><div class="step-no">02</div><h3>Individua eredi e quote</h3><p>Prima di compilare, chiarisci chi sono i chiamati e quali beni rientrano nell'asse ereditario.</p></article>
+        <article class="card"><div class="step-no">03</div><h3>Valuta i beni</h3><p>Per gli immobili conta il valore catastale; per i conti, i saldi alla data del decesso.</p></article>
+        <article class="card"><div class="step-no">04</div><h3>Compila la dichiarazione</h3><p>Puoi utilizzare SuccessioniOnline o rivolgerti a un intermediario abilitato.</p></article>
+        <article class="card"><div class="step-no">05</div><h3>Verifica imposte e tributi</h3><p>Controlla imposta di successione, ipotecaria, catastale e le eventuali agevolazioni applicabili.</p></article>
+        <article class="card"><div class="step-no">06</div><h3>Volture e adempimenti finali</h3><p>Dopo la registrazione, verifica la corretta voltura catastale e gli altri effetti della successione.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="le-guide-piu-utili">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Contenuti gratuiti</div>
+        <h2>Le guide più utili</h2>
+        <p class="section-copy">Una base chiara per capire cosa serve davvero e quali errori evitare.</p>
+      </div>
+      <div class="guide-grid">
+        <a class="card guide-card" href="#"><span class="mini-tag">Fondamentali</span><h3>Documenti per la successione: cosa serve davvero</h3><p>Anagrafe, banca, catasto, testamento: la lista dei documenti da raccogliere prima di iniziare.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Fondamentali</span><h3>Successione telematica: cos'è e come funziona</h3><p>Chi può presentarla, come si trasmette e quali passaggi richiedono più attenzione.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Fondamentali</span><h3>Chi deve presentare la dichiarazione</h3><p>Eredi, legatari, curatori e altri soggetti obbligati: quadro semplice e operativo.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Scadenze</span><h3>Termini e presentazione entro 12 mesi</h3><p>Come si conta il termine e cosa succede se la dichiarazione viene inviata in ritardo.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Errori</span><h3>Successione in ritardo: rischi e rimedi</h3><p>Quando si può regolarizzare con ravvedimento e quali costi aggiuntivi considerare.</p><span class="readmore">Leggi la guida →</span></a>
+        <a class="card guide-card" href="#"><span class="mini-tag">Volture</span><h3>Voltura catastale dopo la successione</h3><p>Quando è automatica, quando va controllata e dove si annidano gli errori più frequenti.</p><span class="readmore">Leggi la guida →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="calcolatore">
+    <div class="container calc">
+      <div class="calc-grid">
+        <div>
+          <div class="section-kicker" style="color:rgba(255,255,255,.82)">Strumento gratuito</div>
+          <h2 class="calc-title" style="margin-top:8px">Calcola le imposte di successione</h2>
+          <p style="color:rgba(255,255,255,.90);margin:10px 0 0">Stima indicativa basata sulle aliquote ordinarie. Il risultato non sostituisce la verifica professionale del caso concreto.</p>
+
+          <form class="calc-form" id="taxForm">
+            <div class="calc-form-grid">
+              <div class="field">
+                <label for="estateValue">Valore complessivo devoluto (€)</label>
+                <input id="estateValue" name="estateValue" type="number" min="0" step="1000" value="1000000" placeholder="Es. 350000">
+              </div>
+              <div class="field">
+                <label for="heirsCount">Numero beneficiari</label>
+                <input id="heirsCount" name="heirsCount" type="number" min="1" step="1" value="1">
+              </div>
+            </div>
+            <div class="calc-form-grid">
+              <div class="field">
+                <label for="relationship">Grado di parentela</label>
+                <select id="relationship" name="relationship">
+                  <option value="spouse_child">Coniuge / parenti in linea retta</option>
+                  <option value="sibling">Fratello / sorella</option>
+                  <option value="disabled">Beneficiario con handicap grave</option>
+                  <option value="other">Altri parenti o soggetti diversi</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="propertyValue">Valore catastale immobili (€)</label>
+                <input id="propertyValue" name="propertyValue" type="number" min="0" step="1000" value="0" placeholder="Solo per imposte ipo-catastali">
+              </div>
+            </div>
+            <label class="checkbox-row"><input type="checkbox" id="primaCasa"> Agevolazione prima casa: imposta ipotecaria e catastale in misura fissa</label>
+          </form>
+          <p class="calc-helper">Il calcolo divide il valore complessivo per il numero dei beneficiari indicato e applica franchigia e aliquota al singolo beneficiario.</p>
+        </div>
+
+        <div class="calc-box" aria-live="polite">
+          <ul class="calc-list">
+            <li><span>Quota per beneficiario</span><strong class="calc-result" id="sharePerHeir">€ 0</strong></li>
+            <li><span>Franchigia per beneficiario</span><strong class="calc-result" id="allowance">€ 0</strong></li>
+            <li><span>Base imponibile netta</span><strong class="calc-result" id="taxableBase">€ 0</strong></li>
+            <li><span>Aliquota applicata</span><strong class="calc-result" id="taxRate">0%</strong></li>
+            <li><span>Imposta successione per beneficiario</span><strong class="calc-result" id="inheritanceTax">€ 0</strong></li>
+            <li><span>Imposta successione totale</span><strong class="calc-result" id="totalTax">€ 0</strong></li>
+            <li><span>Imposta ipotecaria</span><strong class="calc-result" id="mortgageTax">€ 0</strong></li>
+            <li><span>Imposta catastale</span><strong class="calc-result" id="cadastralTax">€ 0</strong></li>
+          </ul>
+          <p class="calc-note">⚠️ Calcolo orientativo. Per gli immobili sono considerate in via semplificata imposta ipotecaria al 2% e catastale all'1% sul valore indicato, salvo agevolazione prima casa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="strumenti">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Strumenti gratuiti</div>
+        <h2>Tutto quello che ti serve, in un posto solo</h2>
+        <p class="section-copy">Strumenti pratici per ogni fase della successione, senza registrazione.</p>
+      </div>
+      <div class="tool-grid">
+        <article class="card"><h3>Checklist documenti</h3><p>Elenco completo dei documenti necessari, suddivisi per categoria e pronti da spuntare.</p><span class="tool-link">Vai alla checklist →</span></article>
+        <article class="card"><h3>Calcolatore imposte</h3><p>Una stima immediata dell'imposta di successione e delle imposte ipo-catastali di base.</p><span class="tool-link">Apri il calcolatore →</span></article>
+        <article class="card"><h3>Calcolatore ravvedimento</h3><p>Strumento dedicato ai casi di ritardo, con riduzione sanzioni e interessi da valutare.</p><span class="tool-link">Calcola il ravvedimento →</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Domande frequenti</div>
+        <h2>Le risposte più cercate</h2>
+        <p class="section-copy">Una prima orientazione per i dubbi più frequenti.</p>
+      </div>
+      <div class="faq-grid">
+        <article class="card"><h3>Quando si apre la successione?</h3><p>Si apre al momento del decesso, nel luogo dell'ultimo domicilio del defunto.</p></article>
+        <article class="card"><h3>Quando non è obbligatoria?</h3><p>Esistono casi di esonero, ma vanno verificati con attenzione, soprattutto se sono presenti immobili.</p></article>
+        <article class="card"><h3>Cosa succede se sono in ritardo?</h3><p>Si applicano sanzioni, ma in molti casi è possibile regolarizzare con ravvedimento operoso.</p></article>
+        <article class="card"><h3>Ci sono agevolazioni prima casa?</h3><p>Sì, in presenza dei requisiti le imposte ipotecaria e catastale possono essere dovute in misura fissa.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <ul class="footer-links">
+      <li><a href="#le-guide-piu-utili">Guide</a></li>
+      <li><a href="#calcolatore">Calcolatore</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div>guidasuccessione.it — Guida informativa indipendente sulla dichiarazione di successione.</div>
+  </footer>
+
+  <script>
+    const formatEuro = (value) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 }).format(value);
+
+    function getConfig(type) {
+      switch (type) {
+        case 'spouse_child': return { allowance: 1000000, rate: 0.04 };
+        case 'sibling': return { allowance: 100000, rate: 0.06 };
+        case 'disabled': return { allowance: 1500000, rate: 0.04 };
+        default: return { allowance: 0, rate: 0.08 };
+      }
+    }
+
+    function updateCalculator() {
+      const estateValue = Math.max(0, Number(document.getElementById('estateValue').value) || 0);
+      const heirsCount = Math.max(1, Number(document.getElementById('heirsCount').value) || 1);
+      const propertyValue = Math.max(0, Number(document.getElementById('propertyValue').value) || 0);
+      const relationship = document.getElementById('relationship').value;
+      const primaCasa = document.getElementById('primaCasa').checked;
+
+      const config = getConfig(relationship);
+      const sharePerHeir = estateValue / heirsCount;
+      const taxableBase = Math.max(0, sharePerHeir - config.allowance);
+      const inheritanceTaxPerHeir = taxableBase * config.rate;
+      const totalTax = inheritanceTaxPerHeir * heirsCount;
+
+      const mortgageTax = primaCasa ? 200 : propertyValue * 0.02;
+      const cadastralTax = primaCasa ? 200 : propertyValue * 0.01;
+
+      document.getElementById('sharePerHeir').textContent = formatEuro(sharePerHeir);
+      document.getElementById('allowance').textContent = formatEuro(config.allowance);
+      document.getElementById('taxableBase').textContent = formatEuro(taxableBase);
+      document.getElementById('taxRate').textContent = (config.rate * 100).toFixed(0) + '%';
+      document.getElementById('inheritanceTax').textContent = formatEuro(inheritanceTaxPerHeir);
+      document.getElementById('totalTax').textContent = formatEuro(totalTax);
+      document.getElementById('mortgageTax').textContent = formatEuro(mortgageTax);
+      document.getElementById('cadastralTax').textContent = formatEuro(cadastralTax);
+    }
+
+    document.querySelectorAll('#taxForm input, #taxForm select').forEach(el => {
+      el.addEventListener('input', updateCalculator);
+      el.addEventListener('change', updateCalculator);
+    });
+
+    updateCalculator();
+  </script>
+</body>
+</html>
