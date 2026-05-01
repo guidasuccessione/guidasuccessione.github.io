@@ -9,23 +9,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f5f0e8;
-  --bg2: #eee8da;
-  --navy: #1a1f2e;
-  --text: #1a1f2e;
-  --muted: #5a6070;
-  --gold: #b8962e;
-  --gold-bg: #f0e6c8;
-  --white: #ffffff;
-  --border: #ddd6c8;
-  --max: 900px;
+  --bg: #f5f0e8; --bg2: #eee8da; --navy: #1a1f2e; --text: #1a1f2e;
+  --muted: #5a6070; --gold: #b8962e; --gold-bg: #f0e6c8;
+  --white: #ffffff; --border: #ddd6c8; --max: 900px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.7; font-size: 16px; }
 a { color: var(--navy); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
-/* ── NAVBAR ── */
 nav.topnav { background: var(--navy); padding: 0 32px; position: sticky; top: 0; z-index: 100; }
 .topnav-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .logo { font-size: 1.15rem; font-weight: 400; color: #fff; }
@@ -33,46 +24,34 @@ nav.topnav { background: var(--navy); padding: 0 32px; position: sticky; top: 0;
 .logo span { color: var(--gold); }
 .topnav-links a { color: rgba(255,255,255,.78); font-size: .88rem; margin-left: 28px; }
 .topnav-links a:hover { color: #fff; text-decoration: none; }
-
-/* ── HERO ── */
+.badge-pill { display: inline-block; background: var(--gold-bg); color: var(--gold); font-size: .75rem; font-weight: 700; border-radius: 20px; padding: 5px 16px; margin-bottom: 20px; letter-spacing: .04em; text-transform: uppercase; }
 .hero { background: var(--bg); padding: 64px 32px 56px; }
 .hero-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: start; }
-.badge-pill { display: inline-block; background: var(--gold-bg); color: var(--gold); font-size: .75rem; font-weight: 700; border-radius: 20px; padding: 5px 16px; margin-bottom: 20px; letter-spacing: .04em; text-transform: uppercase; }
 .hero h1 { font-family: 'Lora', Georgia, serif; font-size: 2.9rem; font-weight: 700; line-height: 1.15; color: var(--navy); margin-bottom: 20px; }
 .hero .lead { font-size: 1rem; color: var(--muted); max-width: 520px; line-height: 1.75; margin-bottom: 32px; }
 .btn-gold { display: inline-block; background: var(--gold); color: #fff; font-weight: 700; font-size: .92rem; padding: 13px 28px; border-radius: 4px; }
 .btn-ghost { display: inline-block; background: transparent; color: var(--navy); font-weight: 600; font-size: .92rem; padding: 12px 24px; border-radius: 4px; border: 1.5px solid var(--navy); margin-left: 10px; }
 .btn-gold:hover, .btn-ghost:hover { text-decoration: none; opacity: .88; }
-
-/* Box "cosa trovi" */
 .hero-box { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 28px 26px; }
 .hero-box h3 { font-family: 'Lora', Georgia, serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 8px; }
 .hero-box p { font-size: .88rem; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
 .hero-box ul { padding-left: 18px; display: grid; gap: 7px; font-size: .87rem; color: var(--muted); }
-
-/* ── STAT BAR ── */
 .stat-bar { background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 24px 32px; }
 .stat-bar-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
 .stat { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 18px 20px; }
 .stat .num { font-family: 'Lora', Georgia, serif; font-size: 1.7rem; font-weight: 700; color: var(--navy); }
 .stat .lbl { font-size: .82rem; color: var(--muted); margin-top: 2px; line-height: 1.4; }
-
-/* ── SEZIONI ── */
 .section { max-width: var(--max); margin: 0 auto; padding: 56px 32px; }
 .section + .section { border-top: 1px solid var(--border); }
 .section-label { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
 h2.section-title { font-family: 'Lora', Georgia, serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 8px; }
 .section-sub { font-size: .93rem; color: var(--muted); margin-bottom: 32px; }
-
-/* ── STEPS ── */
 .steps { display: grid; gap: 0; }
 .step { display: flex; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--border); }
 .step:last-child { border-bottom: none; }
 .step-num { font-family: 'Lora', Georgia, serif; font-size: 1.4rem; color: var(--gold); font-weight: 700; width: 36px; flex-shrink: 0; padding-top: 3px; }
 .step-body h3 { font-size: .97rem; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
 .step-body p { font-size: .89rem; color: var(--muted); }
-
-/* ── GUIDE CARDS ── */
 .guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 8px; }
 .guide-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 22px 20px; display: flex; flex-direction: column; }
 .guide-card .cat { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
@@ -80,46 +59,162 @@ h2.section-title { font-family: 'Lora', Georgia, serif; font-size: 1.8rem; color
 .guide-card p { font-size: .86rem; color: var(--muted); line-height: 1.6; }
 .guide-card a.cta { display: inline-block; margin-top: 16px; font-size: .84rem; font-weight: 600; color: var(--navy); border-bottom: 1px solid currentColor; padding-bottom: 1px; }
 .guide-card a.cta:hover { color: var(--gold); border-color: var(--gold); text-decoration: none; }
-
-/* ── CALCOLATORE ── */
-.calc-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 8px; }
-.form-grid { display: grid; gap: 14px; }
-.form-field label { display: block; font-size: .82rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
-.form-field input, .form-field select { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 4px; font-size: .93rem; background: var(--white); color: var(--text); }
-.form-field input:focus, .form-field select:focus { outline: 2px solid var(--gold); border-color: var(--gold); }
-.btn-calc { background: var(--gold); color: #fff; font-weight: 700; font-size: .92rem; padding: 12px 26px; border-radius: 4px; border: none; cursor: pointer; margin-top: 8px; }
-.btn-calc:hover { opacity: .88; }
-.calc-note { font-size: .78rem; color: var(--muted); margin-top: 10px; line-height: 1.5; }
-.result-panel { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 22px; }
-.result-panel h3 { font-size: .88rem; font-weight: 700; color: var(--navy); margin-bottom: 16px; text-transform: uppercase; letter-spacing: .06em; }
-.result-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
-.result-row:last-child { border-bottom: none; font-weight: 700; font-size: .95rem; color: var(--navy); }
-.result-row span:last-child { font-weight: 600; color: var(--navy); }
-
-/* ── FAQ ── */
 .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px; }
 .faq-item { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 18px 20px; }
 .faq-item h3 { font-size: .93rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
 .faq-item p { font-size: .87rem; color: var(--muted); line-height: 1.6; }
 .faq-item a { color: var(--gold); font-weight: 600; }
-
-/* ── FOOTER ── */
 footer { background: var(--navy); color: rgba(255,255,255,.5); padding: 36px 32px; text-align: center; font-size: .83rem; }
 footer a { color: rgba(255,255,255,.5); margin: 0 10px; }
 footer a:hover { color: #fff; text-decoration: none; }
 footer p + p { margin-top: 10px; }
-
 @media (max-width: 720px) {
-  .hero-inner, .calc-wrapper, .faq-grid { grid-template-columns: 1fr; }
+  .hero-inner, .faq-grid { grid-template-columns: 1fr; }
   .guide-grid { grid-template-columns: 1fr; }
   .stat-bar-inner { grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: 2rem; }
 }
+
+
+/* ── SEZIONE CALCOLATORE – gradiente oro originale ── */
+.calc-section { background: var(--bg); padding: 64px 32px; }
+.calc-inner { max-width: 900px; margin: 0 auto; }
+.calc-card {
+  background: linear-gradient(135deg, #b07d2a 0%, #c4963a 55%, #d5ac58 100%);
+  color: #fff;
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 40px rgba(196,150,58,.28);
+}
+.calc-kicker { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: rgba(255,255,255,.78); font-weight: 700; margin-bottom: 10px; }
+.calc-card h2 { font-family: 'Lora', Georgia, serif; font-size: 1.9rem; color: #fff; margin-bottom: 6px; }
+.calc-desc { color: rgba(255,255,255,.88); font-size: .95rem; margin-bottom: 28px; }
+.calc-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px; align-items: start; }
+.calc-form { display: grid; gap: 14px; }
+.calc-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.field label { display: block; font-size: .88rem; font-weight: 700; color: rgba(255,255,255,.9); margin-bottom: 6px; }
+.field input, .field select {
+  width: 100%; min-height: 44px; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.32);
+  background: rgba(255,255,255,.18);
+  color: #fff; padding: 0 13px; font-size: .93rem; outline: none;
+}
+.field input::placeholder { color: rgba(255,255,255,.5); }
+.field input:focus, .field select:focus { border-color: #fff; background: rgba(255,255,255,.26); }
+.field select option { background: #b07d2a; color: #fff; }
+.checkbox-row { display: flex; align-items: flex-start; gap: 10px; font-size: .9rem; color: rgba(255,255,255,.9); margin-top: 4px; }
+.checkbox-row input { margin-top: 3px; accent-color: #fff; }
+
+/* beni toggle */
+.beni-section { margin-top: 20px; }
+.beni-toggle {
+  display: flex; align-items: center; gap: 10px; cursor: pointer;
+  background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+  border-radius: 10px; padding: 11px 16px; font-weight: 700;
+  font-size: .9rem; color: #fff; width: 100%; text-align: left;
+}
+.beni-toggle:hover { background: rgba(255,255,255,.22); }
+.beni-toggle-icon {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(255,255,255,.25);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.beni-panel { display: none !important; margin-top: 12px; }
+.beni-panel.visible { display: block !important; }
+.beni-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.bene-row {
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 10px; padding: 10px 12px; display: flex; flex-direction: column; gap: 5px;
+}
+.bene-row label { font-size: .82rem; font-weight: 700; color: rgba(255,255,255,.9); display: flex; align-items: center; gap: 6px; }
+.bene-tag { display: inline-block; font-size: .68rem; padding: 2px 7px; border-radius: 999px; background: rgba(255,255,255,.2); color: rgba(255,255,255,.82); font-weight: 500; }
+.bene-row input {
+  width: 100%; border-radius: 7px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.14);
+  color: #fff; padding: 7px 10px; font-size: .88rem; outline: none;
+}
+.bene-row input::placeholder { color: rgba(255,255,255,.48); }
+.bene-row input:focus { border-color: #fff; }
+.beni-scheda-hint { font-size: .78rem; color: rgba(255,255,255,.6); }
+.beni-scheda-hint a { color: rgba(255,255,255,.85); text-decoration: underline; }
+.beni-total-row {
+  margin-top: 12px; background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.32); border-radius: 10px;
+  padding: 12px 16px; display: flex; justify-content: space-between; align-items: center;
+}
+.beni-total-row span { font-size: .9rem; font-weight: 700; color: rgba(255,255,255,.88); }
+.beni-total-row strong { font-size: 1.1rem; color: #fff; }
+.beni-sync-note { font-size: .8rem; color: rgba(255,255,255,.68); margin-top: 8px; }
+.calc-helper { font-size: .88rem; color: rgba(255,255,255,.82); margin-top: 14px; line-height: 1.55; }
+
+/* risultati */
+.calc-box {
+  background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.25);
+  border-radius: 16px; padding: 22px 20px; backdrop-filter: blur(4px);
+}
+.calc-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.calc-list li {
+  display: flex; justify-content: space-between; gap: 12px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  padding-bottom: 10px; font-size: .89rem; color: rgba(255,255,255,.85);
+}
+.calc-list li:last-child { border-bottom: none; font-weight: 700; color: #fff; font-size: .95rem; }
+.calc-result { font-weight: 700; color: #fff; }
+.calc-list-divider {
+  grid-column: 1/-1; border-top: 1px solid rgba(255,255,255,.22) !important;
+  border-bottom: none !important; padding: 6px 0 0 !important;
+  font-size: .75rem; text-transform: uppercase; letter-spacing: .1em;
+  color: rgba(255,255,255,.6); font-weight: 700;
+}
+.calc-note { color: rgba(255,255,255,.78); font-size: .85rem; margin-top: 16px; line-height: 1.5; }
+
+@media (max-width: 720px) {
+  .calc-grid, .calc-form-grid, .beni-grid { grid-template-columns: 1fr; }
+  .calc-section { padding: 40px 20px; }
+  .calc-card { padding: 24px 18px; border-radius: 16px; }
+}
+
+
+/* campo auto-mode */
+#estateValue.auto-mode {
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.65);
+  cursor: not-allowed;
+}
+.estate-field-wrapper { position: relative; }
+.estate-auto-badge {
+  display: none;
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  font-size: .7rem; font-weight: 700;
+  background: rgba(255,255,255,.28); color: #fff;
+  padding: 2px 9px; border-radius: 999px; pointer-events: none;
+}
+.estate-auto-badge.visible { display: block; }
+
+/* toggle inline beni */
+.beni-toggle-inline {
+  display: flex; align-items: center; gap: 9px;
+  cursor: pointer; margin-top: 8px;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 8px; padding: 10px 14px;
+  font-size: .84rem; font-weight: 700;
+  color: rgba(255,255,255,.92); width: 100%; text-align: left;
+  transition: background .15s;
+}
+.beni-toggle-inline:hover { background: rgba(255,255,255,.22); }
+.beni-icon {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(255,255,255,.24);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: .9rem; flex-shrink: 0; font-style: normal;
+  transition: transform .2s;
+}
 </style>
 </head>
 <body>
-
-<!-- NAVBAR -->
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="index.html" class="logo">guida<strong>successione</strong><span>.it</span></a>
@@ -132,7 +227,6 @@ footer p + p { margin-top: 10px; }
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
@@ -140,7 +234,7 @@ footer p + p { margin-top: 10px; }
       <h1>La dichiarazione di successione spiegata chiaramente</h1>
       <p class="lead">Tutto quello che devi sapere per orientarti nella dichiarazione di successione: guide pratiche, calcolatori, checklist, beni ereditari e ravvedimento operoso.</p>
       <a href="come-fare-successione.html" class="btn-gold">Inizia dalla guida</a>
-      <a href="strumenti.html" class="btn-ghost">Prova il calcolatore</a>
+      <a href="#calcolatore" class="btn-ghost">Prova il calcolatore</a>
     </div>
     <div class="hero-box">
       <h3>Cosa trovi in questa guida</h3>
@@ -148,14 +242,13 @@ footer p + p { margin-top: 10px; }
       <ul>
         <li><a href="documenti.html">Documenti da raccogliere prima della compilazione.</a></li>
         <li><a href="chi-deve-presentare.html">Chi deve presentare la dichiarazione e quando si è esonerati.</a></li>
-        <li><a href="strumenti.html">Calcolo indicativo dell'imposta di successione.</a></li>
+        <li><a href="#calcolatore">Calcolo indicativo dell'imposta di successione.</a></li>
         <li><a href="successione-ritardo.html">Indicazioni su ravvedimento, volture e casi frequenti.</a></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- STAT BAR -->
 <div class="stat-bar">
   <div class="stat-bar-inner">
     <div class="stat"><div class="num">12 mesi</div><div class="lbl">per presentare<br>la dichiarazione</div></div>
@@ -165,103 +258,143 @@ footer p + p { margin-top: 10px; }
   </div>
 </div>
 
-<!-- PERCORSO -->
 <div class="section">
   <div class="section-label">Il percorso</div>
   <h2 class="section-title">Come si affronta una successione</h2>
   <p class="section-sub">Non devi fare tutto insieme. Ecco le fasi principali, nell'ordine giusto.</p>
   <div class="steps">
     <div class="step"><div class="step-num">01</div><div class="step-body"><h3>Raccogli i documenti</h3><p>Certificato di morte, visure catastali, saldi bancari, testamento. <a href="documenti.html">Prima raccogli, poi compili →</a></p></div></div>
-    <div class="step"><div class="step-num">02</div><div class="step-body"><h3>Identifica eredi e beni</h3><p>Chi sono gli eredi, in che quota, e quali beni fanno parte dell'asse. <a href="chi-deve-presentare.html">Chi deve presentare la dichiarazione →</a></p></div></div>
+    <div class="step"><div class="step-num">02</div><div class="step-body"><h3>Identifica eredi e beni</h3><p>Chi sono gli eredi, in che quota, e quali beni fanno parte dell'asse. <a href="chi-deve-presentare.html">Chi deve presentare →</a></p></div></div>
     <div class="step"><div class="step-num">03</div><div class="step-body"><h3>Calcola il valore dei beni</h3><p>Gli immobili si valutano con la rendita catastale rivalutata, non con il prezzo di mercato. <a href="imposte.html">Come si calcola →</a></p></div></div>
-    <div class="step"><div class="step-num">04</div><div class="step-body"><h3>Compila la dichiarazione</h3><p>Tramite SuccessioniOnline dell'Agenzia delle Entrate o tramite intermediario. <a href="successione-telematica.html">Come funziona il portale →</a></p></div></div>
+    <div class="step"><div class="step-num">04</div><div class="step-body"><h3>Compila la dichiarazione</h3><p>Tramite SuccessioniOnline dell'Agenzia delle Entrate o tramite intermediario. <a href="successione-telematica.html">Come funziona →</a></p></div></div>
     <div class="step"><div class="step-num">05</div><div class="step-body"><h3>Presenta e paga le imposte</h3><p>La dichiarazione si invia telematicamente. Le imposte vengono liquidate dopo il controllo. <a href="scadenze.html">Termini e scadenze →</a></p></div></div>
     <div class="step"><div class="step-num">06</div><div class="step-body"><h3>Esegui la voltura catastale</h3><p>Dopo l'accettazione, gli immobili vanno trascritti a nome degli eredi presso il catasto. <a href="come-fare-successione.html">Guida completa →</a></p></div></div>
   </div>
 </div>
 
-<!-- GUIDE -->
 <div class="section">
   <div class="section-label">Contenuti gratuiti</div>
   <h2 class="section-title">Le guide più utili</h2>
   <p class="section-sub">Articoli scritti in italiano semplice, senza tecnicismi inutili, aggiornati alle norme vigenti.</p>
   <div class="guide-grid">
-    <div class="guide-card">
-      <div class="cat">Fondamentali</div>
-      <h3>Documenti per la successione: cosa serve davvero</h3>
-      <p>Anagrafe, banca, catasto, testamento: la lista completa di tutto quello che devi raccogliere prima di iniziare.</p>
-      <a href="documenti.html" class="cta">Leggi la guida →</a>
-    </div>
-    <div class="guide-card">
-      <div class="cat">Fondamentali</div>
-      <h3>Successione telematica: cos'è e come funziona</h3>
-      <p>Cos'è il portale SuccessioniOnline, chi può usarlo e quando è obbligatorio presentare in via telematica.</p>
-      <a href="successione-telematica.html" class="cta">Leggi la guida →</a>
-    </div>
-    <div class="guide-card">
-      <div class="cat">Fondamentali</div>
-      <h3>Chi deve presentare la dichiarazione di successione</h3>
-      <p>Eredi, legatari, chiamati all'eredità: chi è obbligato, chi è esonerato e cosa succede se ci sono più eredi.</p>
-      <a href="chi-deve-presentare.html" class="cta">Leggi la guida →</a>
-    </div>
-    <div class="guide-card">
-      <div class="cat">Scadenze</div>
-      <h3>Scadenze e tempi della successione online</h3>
-      <p>Hai 12 mesi dal decesso. Cosa succede se superi il termine, come si contano i mesi e le eccezioni previste.</p>
-      <a href="scadenze.html" class="cta">Leggi la guida →</a>
-    </div>
-    <div class="guide-card">
-      <div class="cat">Guida passo-passo</div>
-      <h3>Come fare la successione online in 7 mosse</h3>
-      <p>Dal certificato di morte all'invio telematico: tutto il percorso spiegato passo dopo passo, senza salti.</p>
-      <a href="come-fare-successione.html" class="cta">Leggi la guida →</a>
-    </div>
-    <div class="guide-card">
-      <div class="cat">Errori e problemi</div>
-      <h3>Successione in ritardo: rischi e rimedi</h3>
-      <p>Hai superato i 12 mesi? Puoi ancora regolarizzarti con il ravvedimento operoso, pagando sanzioni ridotte.</p>
-      <a href="successione-ritardo.html" class="cta">Leggi la guida →</a>
-    </div>
+    <div class="guide-card"><div class="cat">Fondamentali</div><h3>Documenti per la successione: cosa serve davvero</h3><p>Anagrafe, banca, catasto, testamento: la lista completa di tutto quello che devi raccogliere prima di iniziare.</p><a href="documenti.html" class="cta">Leggi la guida →</a></div>
+    <div class="guide-card"><div class="cat">Fondamentali</div><h3>Successione telematica: cos'è e come funziona</h3><p>Cos'è il portale SuccessioniOnline, chi può usarlo e quando è obbligatorio presentare in via telematica.</p><a href="successione-telematica.html" class="cta">Leggi la guida →</a></div>
+    <div class="guide-card"><div class="cat">Fondamentali</div><h3>Chi deve presentare la dichiarazione</h3><p>Eredi, legatari, chiamati all'eredità: chi è obbligato, chi è esonerato e cosa succede se ci sono più eredi.</p><a href="chi-deve-presentare.html" class="cta">Leggi la guida →</a></div>
+    <div class="guide-card"><div class="cat">Scadenze</div><h3>Scadenze e tempi della successione</h3><p>Hai 12 mesi dal decesso. Cosa succede se superi il termine, come si contano i mesi e le eccezioni previste.</p><a href="scadenze.html" class="cta">Leggi la guida →</a></div>
+    <div class="guide-card"><div class="cat">Guida passo-passo</div><h3>Come fare la successione online in 7 mosse</h3><p>Dal certificato di morte all'invio telematico: tutto il percorso spiegato passo dopo passo, senza salti.</p><a href="come-fare-successione.html" class="cta">Leggi la guida →</a></div>
+    <div class="guide-card"><div class="cat">Errori e problemi</div><h3>Successione in ritardo: rischi e rimedi</h3><p>Hai superato i 12 mesi? Puoi ancora regolarizzarti con il ravvedimento operoso, pagando sanzioni ridotte.</p><a href="successione-ritardo.html" class="cta">Leggi la guida →</a></div>
   </div>
 </div>
 
-<!-- CALCOLATORE -->
-<div class="section" id="calcolatore">
-  <div class="section-label">Strumento gratuito</div>
-  <h2 class="section-title">Calcola le imposte di successione</h2>
-  <p class="section-sub">Stima indicativa basata sulle aliquote vigenti. Non sostituisce una consulenza professionale.</p>
-  <div class="calc-wrapper">
-    <div>
-      <div class="form-grid">
-        <div class="form-field"><label>Valore totale beni (€)</label><input id="valore" type="number" placeholder="es. 300.000" oninput="calcola()"></div>
-        <div class="form-field"><label>di cui immobili (€)</label><input id="immobili" type="number" placeholder="es. 200.000" oninput="calcola()"></div>
-        <div class="form-field"><label>Numero di beneficiari</label><input id="nben" type="number" value="1" min="1" oninput="calcola()"></div>
-        <div class="form-field"><label>Grado di parentela</label>
-          <select id="grado" onchange="calcola()">
-            <option value="coniuge">Coniuge / Figlio (4% – franchigia 1 M€)</option>
-            <option value="fratello">Fratello / Sorella (6% – franchigia 100 k€)</option>
-            <option value="parente4">Parente entro 4° grado (6% – no franchigia)</option>
-            <option value="altri">Altri soggetti (8% – no franchigia)</option>
-          </select>
+<!-- ══ CALCOLATORE ══ -->
+<section class="calc-section" id="calcolatore">
+  <div class="calc-inner">
+    <div class="calc-card">
+      <div class="calc-kicker">Strumento gratuito</div>
+      <h2>Calcola le imposte di successione</h2>
+      <p class="calc-desc">Inserisci il valore totale oppure espandi il dettaglio per compilare i singoli asset. Il totale si aggiorna automaticamente.</p>
+      <div class="calc-grid">
+        <div>
+          <form class="calc-form" id="taxForm">
+
+            <!-- CAMPO VALORE + TOGGLE BENI INTEGRATO -->
+            <div class="field">
+              <label for="estateValue">Valore complessivo devoluto (€)</label>
+              <div class="estate-field-wrapper">
+                <input id="estateValue" name="estateValue" type="number" min="0" step="1000" value="0" placeholder="Inserisci il totale oppure usa il dettaglio ↓">
+                <span class="estate-auto-badge" id="autobadge">⟳ calcolato</span>
+              </div>
+              <button class="beni-toggle-inline" id="beniToggle" type="button">
+                <em class="beni-icon" id="beniIcon">+</em>
+                <span id="beniLabel">Dettaglio tipologie di beni dell'asse ereditario</span>
+              </button>
+            </div>
+
+            <!-- PANNELLO BENI — inizialmente nascosto via style inline -->
+            <div id="beniPanel" style="display:none;margin-top:4px;">
+              <div class="beni-grid">
+                <div class="bene-row"><label for="b_fabbricati">🏠 Fabbricati <span class="bene-tag">Quadro EC</span></label><input id="b_fabbricati" type="number" min="0" step="1000" placeholder="Valore catastale rivalutato (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Come si valorizza →</a></div></div>
+                <div class="bene-row"><label for="b_agricoli">🌾 Terreni agricoli <span class="bene-tag">Quadro EB</span></label><input id="b_agricoli" type="number" min="0" step="1000" placeholder="Valore catastale rivalutato (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Come si valorizza →</a></div></div>
+                <div class="bene-row"><label for="b_edificabili">🏗️ Terreni edificabili <span class="bene-tag">Quadro EB</span></label><input id="b_edificabili" type="number" min="0" step="1000" placeholder="Valore di mercato (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Come si valorizza →</a></div></div>
+                <div class="bene-row"><label for="b_parz_edificabili">🧩 Terreni parz. edificabili <span class="bene-tag">Quadro EB</span></label><input id="b_parz_edificabili" type="number" min="0" step="1000" placeholder="Valore complessivo (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Come si valorizza →</a></div></div>
+                <div class="bene-row"><label for="b_conti">🏦 Conti correnti e depositi <span class="bene-tag">Quadro EC</span></label><input id="b_conti" type="number" min="0" step="100" placeholder="Saldo alla data del decesso (€)"><div class="beni-scheda-hint">📄 <a href="documenti.html">Documenti richiesti →</a></div></div>
+                <div class="bene-row"><label for="b_libretti">💰 Libretti di risparmio <span class="bene-tag">Quadro EC</span></label><input id="b_libretti" type="number" min="0" step="100" placeholder="Saldo alla data del decesso (€)"><div class="beni-scheda-hint">📄 <a href="documenti.html">Documenti richiesti →</a></div></div>
+                <div class="bene-row"><label for="b_titoli">📈 Titoli, azioni e partecipazioni <span class="bene-tag">Quadro ED</span></label><input id="b_titoli" type="number" min="0" step="100" placeholder="Valore alla data del decesso (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Criteri di valorizzazione →</a></div></div>
+                <div class="bene-row"><label for="b_aziende">🏭 Aziende e rami d'azienda <span class="bene-tag">Quadro EE</span></label><input id="b_aziende" type="number" min="0" step="1000" placeholder="Valore dell'azienda (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Esenzioni disponibili →</a></div></div>
+                <div class="bene-row"><label for="b_quote">🤝 Quote s.r.l. e soc. persone <span class="bene-tag">Quadro EE</span></label><input id="b_quote" type="number" min="0" step="1000" placeholder="Valore della quota (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Esenzioni disponibili →</a></div></div>
+                <div class="bene-row"><label for="b_rendite">📜 Rendite e pensioni <span class="bene-tag">Quadro EF</span></label><input id="b_rendite" type="number" min="0" step="100" placeholder="Valore capitalizzato (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Base imponibile →</a></div></div>
+                <div class="bene-row"><label for="b_crediti">🧾 Crediti del defunto <span class="bene-tag">Quadro EG</span></label><input id="b_crediti" type="number" min="0" step="100" placeholder="Importo del credito (€)"><div class="beni-scheda-hint">📄 <a href="documenti.html">Documenti richiesti →</a></div></div>
+                <div class="bene-row"><label for="b_veicoli">🚗 Veicoli e imbarcazioni <span class="bene-tag">Quadro EH</span></label><input id="b_veicoli" type="number" min="0" step="100" placeholder="Valore di mercato (€)"><div class="beni-scheda-hint">📄 <a href="documenti.html">Documenti richiesti →</a></div></div>
+                <div class="bene-row"><label for="b_altri">📦 Altri beni e diritti <span class="bene-tag">Quadro EH</span></label><input id="b_altri" type="number" min="0" step="100" placeholder="Valore complessivo (€)"><div class="beni-scheda-hint">📄 <a href="imposte.html">Come si valorizza →</a></div></div>
+              </div>
+              <div class="beni-total-row">
+                <span>Totale beni inseriti</span>
+                <strong id="beniTotale">€ 0</strong>
+              </div>
+              <p class="beni-sync-note">⟳ Il totale aggiorna automaticamente il valore complessivo devoluto. Ogni campo corrisponde a un quadro della dichiarazione telematica.</p>
+            </div>
+
+            <!-- ALTRI CAMPI -->
+            <div class="calc-form-grid">
+              <div class="field">
+                <label for="heirsCount">Numero beneficiari</label>
+                <input id="heirsCount" name="heirsCount" type="number" min="1" step="1" value="1">
+              </div>
+              <div class="field">
+                <label for="relationship">Grado di parentela</label>
+                <select id="relationship" name="relationship">
+                  <option value="spouse_child">Coniuge / parenti in linea retta</option>
+                  <option value="sibling">Fratello / sorella</option>
+                  <option value="disabled">Beneficiario con handicap grave (L.104)</option>
+                  <option value="other">Altri parenti o soggetti diversi</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="propertyValue">Valore catastale immobili (€) <span style="font-weight:400;font-size:.8rem;opacity:.75">– per imposte ipo-catastali</span></label>
+              <input id="propertyValue" name="propertyValue" type="number" min="0" step="1000" value="0" placeholder="Auto-calcolato se usi il dettaglio beni">
+            </div>
+            <label class="checkbox-row">
+              <input type="checkbox" id="primaCasa">
+              Agevolazione prima casa: ipotecaria e catastale in misura fissa (200 € ciascuna)
+            </label>
+          </form>
+          <p class="calc-helper">Il calcolo divide il valore complessivo per il numero dei beneficiari e applica franchigia e aliquota al singolo beneficiario.</p>
+        </div>
+
+        <!-- PANNELLO RISULTATI -->
+        <div class="calc-box" aria-live="polite">
+          <ul class="calc-list">
+            <li><span>Quota per beneficiario</span><strong class="calc-result" id="sharePerHeir">€ 0</strong></li>
+            <li><span>Franchigia per beneficiario</span><strong class="calc-result" id="allowance">€ 0</strong></li>
+            <li><span>Base imponibile netta</span><strong class="calc-result" id="taxableBase">€ 0</strong></li>
+            <li><span>Aliquota applicata</span><strong class="calc-result" id="taxRate">0%</strong></li>
+            <li><span>Imposta successione per beneficiario</span><strong class="calc-result" id="inheritanceTax">€ 0</strong></li>
+            <li><span>Imposta successione totale</span><strong class="calc-result" id="totalTax">€ 0</strong></li>
+            <li><span>Imposta ipotecaria</span><strong class="calc-result" id="mortgageTax">€ 0</strong></li>
+            <li><span>Imposta catastale</span><strong class="calc-result" id="cadastralTax">€ 0</strong></li>
+            <li id="beniRiepilogoHeader" style="display:none;grid-column:1/-1;border-top:1px solid rgba(255,255,255,.2);padding-top:8px;margin-top:4px;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);font-weight:700;">Composizione asse ereditario</li>
+            <li id="r_fabbricati" style="display:none"><span>🏠 Fabbricati</span><strong class="calc-result" id="rv_fabbricati">€ 0</strong></li>
+            <li id="r_agricoli" style="display:none"><span>🌾 Terreni agricoli</span><strong class="calc-result" id="rv_agricoli">€ 0</strong></li>
+            <li id="r_edificabili" style="display:none"><span>🏗️ Terreni edificabili</span><strong class="calc-result" id="rv_edificabili">€ 0</strong></li>
+            <li id="r_parz_edificabili" style="display:none"><span>🧩 Terreni parz. edificabili</span><strong class="calc-result" id="rv_parz_edificabili">€ 0</strong></li>
+            <li id="r_conti" style="display:none"><span>🏦 Conti e depositi</span><strong class="calc-result" id="rv_conti">€ 0</strong></li>
+            <li id="r_libretti" style="display:none"><span>💰 Libretti</span><strong class="calc-result" id="rv_libretti">€ 0</strong></li>
+            <li id="r_titoli" style="display:none"><span>📈 Titoli e azioni</span><strong class="calc-result" id="rv_titoli">€ 0</strong></li>
+            <li id="r_aziende" style="display:none"><span>🏭 Aziende</span><strong class="calc-result" id="rv_aziende">€ 0</strong></li>
+            <li id="r_quote" style="display:none"><span>🤝 Quote societarie</span><strong class="calc-result" id="rv_quote">€ 0</strong></li>
+            <li id="r_rendite" style="display:none"><span>📜 Rendite</span><strong class="calc-result" id="rv_rendite">€ 0</strong></li>
+            <li id="r_crediti" style="display:none"><span>🧾 Crediti</span><strong class="calc-result" id="rv_crediti">€ 0</strong></li>
+            <li id="r_veicoli" style="display:none"><span>🚗 Veicoli</span><strong class="calc-result" id="rv_veicoli">€ 0</strong></li>
+            <li id="r_altri" style="display:none"><span>📦 Altri beni</span><strong class="calc-result" id="rv_altri">€ 0</strong></li>
+          </ul>
+          <p class="calc-note">⚠️ Calcolo orientativo. Per gli immobili: ipotecaria al 2% e catastale all'1%, salvo agevolazione prima casa.</p>
         </div>
       </div>
-      <p class="calc-note">⟳ Il totale aggiorna automaticamente. Il calcolo divide il valore complessivo per il numero dei beneficiari e applica franchigia e aliquota al singolo beneficiario.<br><br>⚠️ Calcolo orientativo. Per gli immobili: imposta ipotecaria al 2% e catastale all'1%, salvo agevolazione prima casa.</p>
-    </div>
-    <div class="result-panel">
-      <h3>Risultato</h3>
-      <div class="result-row"><span>Quota per beneficiario</span><span id="r-quota">€ 0</span></div>
-      <div class="result-row"><span>Franchigia per beneficiario</span><span id="r-fr">€ 0</span></div>
-      <div class="result-row"><span>Base imponibile netta</span><span id="r-base">€ 0</span></div>
-      <div class="result-row"><span>Aliquota applicata</span><span id="r-al">0%</span></div>
-      <div class="result-row"><span>Imposta successione per beneficiario</span><span id="r-sing">€ 0</span></div>
-      <div class="result-row"><span>Imposta successione totale</span><span id="r-tot">€ 0</span></div>
-      <div class="result-row"><span>Imposta ipotecaria</span><span id="r-ipot">€ 0</span></div>
-      <div class="result-row"><span>Imposta catastale</span><span id="r-cat">€ 0</span></div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- FAQ -->
 <div class="section">
   <div class="section-label">Domande frequenti</div>
   <h2 class="section-title">Le risposte più cercate</h2>
@@ -269,15 +402,15 @@ footer p + p { margin-top: 10px; }
   <div class="faq-grid">
     <div class="faq-item"><h3>Quando si apre la successione?</h3><p>La successione si apre al momento della morte del defunto, nel luogo del suo ultimo domicilio. Da quel momento decorrono i 12 mesi per la dichiarazione.</p></div>
     <div class="faq-item"><h3>Quando non è obbligatoria?</h3><p>Non è obbligatoria nei casi di esonero previsti per coniuge e parenti in linea retta entro 100.000 euro e senza immobili. <a href="chi-deve-presentare.html">Scopri i dettagli →</a></p></div>
-    <div class="faq-item"><h3>Cosa succede se sono in ritardo?</h3><p>Scattano sanzioni per omessa o tardiva dichiarazione, ma il ravvedimento operoso consente una forte riduzione. <a href="successione-ritardo.html">Come rimediare →</a></p></div>
-    <div class="faq-item"><h3>La polizza vita rientra nell'asse?</h3><p>In generale no, se c'è beneficiario nominato; alcune polizze finanziarie possono però essere riqualificate. <a href="faq.html">Leggi la risposta completa →</a></p></div>
-    <div class="faq-item"><h3>Ci sono agevolazioni prima casa?</h3><p>Sì, in presenza dei requisiti le imposte ipotecaria e catastale sono dovute in misura fissa di 200 € ciascuna. <a href="imposte.html">Scopri le agevolazioni →</a></p></div>
-    <div class="faq-item"><h3>Posso rinunciare all'eredità?</h3><p>Sì, con atto formale davanti al notaio o al cancelliere del Tribunale; in alternativa è possibile l'accettazione con beneficio di inventario. <a href="faq.html">Tutte le FAQ →</a></p></div>
+    <div class="faq-item"><h3>Cosa succede se sono in ritardo?</h3><p>Scattano sanzioni, ma il ravvedimento operoso consente una forte riduzione. <a href="successione-ritardo.html">Come rimediare →</a></p></div>
+    <div class="faq-item"><h3>La polizza vita rientra nell'asse?</h3><p>In generale no, se c'è beneficiario nominato; alcune polizze finanziarie possono però essere riqualificate. <a href="faq.html">Risposta completa →</a></p></div>
+    <div class="faq-item"><h3>Ci sono agevolazioni prima casa?</h3><p>Sì, le imposte ipotecaria e catastale si pagano in misura fissa di 200 € ciascuna. <a href="imposte.html">Scopri le agevolazioni →</a></p></div>
+    <div class="faq-item"><h3>Posso rinunciare all'eredità?</h3><p>Sì, con atto formale davanti al notaio o al cancelliere del Tribunale. <a href="faq.html">Tutte le FAQ →</a></p></div>
   </div>
 </div>
 
 <footer>
-  <p>© 2025 GuidaSuccessione.it &mdash; Guida gratuita e indipendente alla dichiarazione di successione</p>
+  <p>© 2025 GuidaSuccessione.it — Guida gratuita e indipendente alla dichiarazione di successione</p>
   <p>Contenuto informativo, non consulenza legale o fiscale &nbsp;·&nbsp;
     <a href="privacy.html">Privacy</a>
     <a href="cookie.html">Cookie</a>
@@ -286,26 +419,110 @@ footer p + p { margin-top: 10px; }
 </footer>
 
 <script>
-function fmt(n){return n.toLocaleString('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:0});}
-function calcola(){
-  var v=parseFloat(document.getElementById('valore').value)||0;
-  var imm=parseFloat(document.getElementById('immobili').value)||0;
-  var nb=parseInt(document.getElementById('nben').value)||1;
-  var g=document.getElementById('grado').value;
-  var quota=v/nb;
-  var fr=g==='coniuge'?1000000:g==='fratello'?100000:0;
-  var al=g==='coniuge'?0.04:g==='fratello'?0.06:g==='parente4'?0.06:0.08;
-  var base=Math.max(0,quota-fr);
-  document.getElementById('r-quota').textContent=fmt(quota);
-  document.getElementById('r-fr').textContent=fmt(fr);
-  document.getElementById('r-base').textContent=fmt(base);
-  document.getElementById('r-al').textContent=(al*100)+'%';
-  document.getElementById('r-sing').textContent=fmt(base*al);
-  document.getElementById('r-tot').textContent=fmt(base*al*nb);
-  document.getElementById('r-ipot').textContent=fmt(imm*0.02);
-  document.getElementById('r-cat').textContent=fmt(imm*0.01);
-}
-calcola();
+(function() {
+  const fmt = v => new Intl.NumberFormat('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:2}).format(v);
+
+  function getConfig(t) {
+    if (t==='spouse_child') return {allowance:1000000,rate:0.04};
+    if (t==='sibling')      return {allowance:100000, rate:0.06};
+    if (t==='disabled')     return {allowance:1500000,rate:0.04};
+    return {allowance:0,rate:0.08};
+  }
+
+  const BENI = ['fabbricati','agricoli','edificabili','parz_edificabili',
+                'conti','libretti','titoli','aziende','quote',
+                'rendite','crediti','veicoli','altri'];
+  const IMMO = ['fabbricati','agricoli','edificabili','parz_edificabili'];
+
+  var beniOpen = false;
+
+  var panel     = document.getElementById('beniPanel');
+  var toggleBtn = document.getElementById('beniToggle');
+  var icon      = document.getElementById('beniIcon');
+  var label     = document.getElementById('beniLabel');
+  var badge     = document.getElementById('autobadge');
+  var estInput  = document.getElementById('estateValue');
+  var propInput = document.getElementById('propertyValue');
+
+  toggleBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    beniOpen = !beniOpen;
+    panel.style.display  = beniOpen ? 'block' : 'none';
+    icon.textContent     = beniOpen ? '−' : '+';
+    label.textContent    = beniOpen
+      ? 'Chiudi dettaglio (totale calcolato automaticamente)'
+      : "Dettaglio tipologie di beni dell'asse ereditario";
+    toggleBtn.setAttribute('aria-expanded', beniOpen);
+
+    if (beniOpen) {
+      estInput.readOnly = true;
+      estInput.classList.add('auto-mode');
+      badge.classList.add('visible');
+      syncBeni();
+    } else {
+      estInput.readOnly = false;
+      estInput.classList.remove('auto-mode');
+      badge.classList.remove('visible');
+    }
+  });
+
+  function syncBeni() {
+    var total = BENI.reduce(function(s,id){return s+(parseFloat(document.getElementById('b_'+id).value)||0);},0);
+    var immo  = IMMO.reduce(function(s,id){return s+(parseFloat(document.getElementById('b_'+id).value)||0);},0);
+
+    document.getElementById('beniTotale').textContent = fmt(total);
+    estInput.value = total > 0 ? total : '';
+    if (immo > 0) propInput.value = immo;
+
+    var hasAny = false;
+    BENI.forEach(function(id) {
+      var v = parseFloat(document.getElementById('b_'+id).value)||0;
+      document.getElementById('r_'+id).style.display  = v > 0 ? '' : 'none';
+      document.getElementById('rv_'+id).textContent   = fmt(v);
+      if (v > 0) hasAny = true;
+    });
+    document.getElementById('beniRiepilogoHeader').style.display = hasAny ? '' : 'none';
+    calc();
+  }
+
+  function calc() {
+    var estate   = Math.max(0, parseFloat(estInput.value)||0);
+    var heirs    = Math.max(1, parseInt(document.getElementById('heirsCount').value)||1);
+    var prop     = Math.max(0, parseFloat(propInput.value)||0);
+    var rel      = document.getElementById('relationship').value;
+    var prima    = document.getElementById('primaCasa').checked;
+    var cfg      = getConfig(rel);
+    var share    = estate / heirs;
+    var base     = Math.max(0, share - cfg.allowance);
+    var taxSing  = base * cfg.rate;
+    var taxTot   = taxSing * heirs;
+    var mortg    = prima ? 200 : prop * 0.02;
+    var cadas    = prima ? 200 : prop * 0.01;
+    document.getElementById('sharePerHeir').textContent  = fmt(share);
+    document.getElementById('allowance').textContent      = fmt(cfg.allowance);
+    document.getElementById('taxableBase').textContent    = fmt(base);
+    document.getElementById('taxRate').textContent        = (cfg.rate*100).toFixed(0)+'%';
+    document.getElementById('inheritanceTax').textContent = fmt(taxSing);
+    document.getElementById('totalTax').textContent       = fmt(taxTot);
+    document.getElementById('mortgageTax').textContent    = fmt(mortg);
+    document.getElementById('cadastralTax').textContent   = fmt(cadas);
+  }
+
+  // listener beni
+  BENI.forEach(function(id) {
+    document.getElementById('b_'+id).addEventListener('input', function(){ if(beniOpen) syncBeni(); });
+  });
+
+  // listener altri campi
+  ['heirsCount','relationship','propertyValue'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',  calc);
+    document.getElementById(id).addEventListener('change', calc);
+  });
+  document.getElementById('primaCasa').addEventListener('change', calc);
+  estInput.addEventListener('input', function(){ if(!beniOpen) calc(); });
+
+  calc();
+})();
 </script>
 </body>
 </html>
